@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>M.J.BotCreate | Заказать Telegram бота</title>
+    <style>
+        :root {
+            --wood-dark: #4E342E;
+            --wood-medium: #8D6E63;
+            --white-trans: rgba(255, 255, 255, 0.9); 
+        }
+
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            color: var(--wood-dark);
+            line-height: 1.6;
+            /* Фон с кодом и серверами */
+            background-image: url('https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1600&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        header {
+            background-color: rgba(78, 52, 46, 0.95);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 0 20px 50px 20px;
+        }
+
+        .card {
+            background: var(--white-trans);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border: 1px solid var(--wood-medium);
+            text-align: center;
+            backdrop-filter: blur(8px);
+        }
+
+        .price-box {
+            background: rgba(255, 249, 196, 0.95);
+            padding: 20px;
+            border-left: 6px solid var(--wood-dark);
+            margin: 25px 0;
+            border-radius: 0 15px 15px 0;
+        }
+
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 16px 38px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+            border: none;
+            font-size: 1.1em;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .btn-main { background: var(--wood-dark); color: white; }
+        .btn-sub { background: var(--wood-medium); color: white; }
+        .btn:hover { transform: translateY(-3px); box-shadow: 0 6px 20px rgba(0,0,0,0.2); }
+
+        section {
+            display: none;
+            margin-top: 30px;
+            text-align: left;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.85);
+            border-radius: 15px;
+            border: 1px dashed var(--wood-medium);
+        }
+
+        .delivery-info {
+            font-size: 0.95em;
+            margin-top: 10px;
+            color: #333;
+            text-align: left;
+            display: inline-block;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+            background-color: rgba(78, 52, 46, 0.9);
+            color: white;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 style="margin:0; letter-spacing: 3px; font-size: 2.5em;">M.J.BotCreate</h1>
+    <p style="margin:10px 0 0 0; font-weight: 300;">Создание профессиональных решений для Telegram</p>
+</header>
+
+<div class="container">
+    <div class="card">
+        <h2 style="font-size: 1.8em;">Нужен качественный бот?</h2>
+        <p>Разработка на чистом Python с 2020 года.</p>
+        
+        <div class="price-box">
+            <div style="font-size: 2em; font-weight: 900; color: var(--wood-dark);">от 999₽</div>
+            <div class="delivery-info">
+                <strong>Что вы получаете:</strong>
+                <ul style="margin: 10px 0 0 20px; padding: 0;">
+<li>Готовая <b>папка</b> со всеми файлами проекта</li>
+                    <li>Полная <b>инструкция</b> по запуску и настройке</li>
+                    <li>Список необходимых библиотек (requirements.txt)</li>
+                    <li>Поддержка и ответы на вопросы по коду</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="btn-group">
+            <a href="https://t.me/Maks_BotDisign" class="btn btn-main">Купить бота</a>
+            <button onclick="showAbout()" class="btn btn-sub">О нас / Доверие</button>
+        </div>
+
+        <section id="about-section">
+            <h3 style="border-bottom: 2px solid var(--wood-dark); padding-bottom: 10px;">Почему выбирают M.J.BotCreate?</h3>
+            <p>Я не использую конструкторы. Каждый бот пишется индивидуально под ваши задачи. За 5 лет работы накоплен огромный опыт в автоматизации процессов.</p>
+            <ul>
+                <li><strong>Прозрачность:</strong> Цена фиксируется до начала работы.</li>
+                <li><strong>Скорость:</strong> Базовые решения отдаю в день заказа.</li>
+                <li><strong>Качество:</strong> Использую библиотеку aiogram (самая быстрая для TG).</li>
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        Связь в Telegram: <a href="https://t.me/Maks_BotDisign" style="color: #FFD54F; text-decoration: none;"><strong>@Maks_BotDisign</strong></a>
+    </footer>
+</div>
+
+<script>
+    function showAbout() {
+        var x = document.getElementById("about-section");
+        if (x.style.display === "block") {
+            x.style.display = "none";
+        } else {
+            x.style.display = "block";
+            x.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+</script>
+
+</body>
+</html>
